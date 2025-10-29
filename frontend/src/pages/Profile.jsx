@@ -1,6 +1,5 @@
-import { useAuth } from '../context/AuthContext';
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,17 +7,9 @@ const Profile = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'; // Add this import
-
-const Profile = () => {
-  const { user } = useAuth();
-  
->>>>>>> origin/main
   console.log('Profile user data:', user); // Debug log
 
-  // Format date properly
+  // ✅ Format date properly
   const formatDate = (dateString) => {
     if (!dateString) return 'Not available';
     try {
@@ -33,7 +24,6 @@ const Profile = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navigation />
 
@@ -41,16 +31,7 @@ const Profile = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <h1 className="text-2xl font-bold text-gray-800 mb-6">My Profile</h1>
 
-=======
-    <div className="min-h-screen bg-gray-50 flex flex-col"> {/* Add flex-col */}
-      <Navigation />
-      
-      <div className="flex-1 max-w-4xl mx-auto py-8 px-4"> {/* Add flex-1 */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-6">My Profile</h1>
-          
->>>>>>> origin/main
-          {/* Personal Information */}
+          {/* 🧍 Personal Information */}
           <div className="mb-8">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Personal Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -89,7 +70,7 @@ const Profile = () => {
             </div>
           </div>
 
-          {/* Account Status */}
+          {/* 🧾 Account Status */}
           <div className="mb-8">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Account Status</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -97,9 +78,13 @@ const Profile = () => {
                 <label className="block text-sm font-medium text-gray-600 mb-1">
                   Phone Verification
                 </label>
-                <div className={`p-3 rounded border ${
-                  user?.isVerified ? 'bg-green-50 border-green-200 text-green-700' : 'bg-yellow-50 border-yellow-200 text-yellow-700'
-                }`}>
+                <div
+                  className={`p-3 rounded border ${
+                    user?.isVerified
+                      ? 'bg-green-50 border-green-200 text-green-700'
+                      : 'bg-yellow-50 border-yellow-200 text-yellow-700'
+                  }`}
+                >
                   {user?.isVerified ? 'Verified' : 'Pending'}
                 </div>
               </div>
@@ -132,12 +117,11 @@ const Profile = () => {
             </div>
           </div>
 
-          {/* Quick Actions */}
+          {/* ⚡ Quick Actions */}
           <div>
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Quick Actions</h2>
             <div className="flex flex-wrap gap-3">
-<<<<<<< HEAD
-              <button 
+              <button
                 onClick={() => navigate('/profile/orders')}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center space-x-2"
               >
@@ -145,7 +129,7 @@ const Profile = () => {
                 <span>View Order History</span>
               </button>
 
-              <button 
+              <button
                 onClick={() => navigate('/profile/payment-methods')}
                 className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center space-x-2"
               >
@@ -153,39 +137,21 @@ const Profile = () => {
                 <span>Payment Methods</span>
               </button>
 
-              <button 
+              <button
                 onClick={() => navigate('/profile/security')}
                 className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center space-x-2"
               >
                 <span>🔒</span>
                 <span>Security Settings</span>
-=======
-              <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-                View Order History
-              </button>
-              <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
-                Payment Methods
-              </button>
-              <button className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition">
-                Security Settings
->>>>>>> origin/main
               </button>
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-      {/* Add Footer */}
->>>>>>> origin/main
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Profile;
-=======
-export default Profile;
->>>>>>> origin/main
