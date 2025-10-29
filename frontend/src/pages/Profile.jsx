@@ -1,4 +1,5 @@
 import { useAuth } from '../context/AuthContext';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -7,6 +8,14 @@ const Profile = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer'; // Add this import
+
+const Profile = () => {
+  const { user } = useAuth();
+  
+>>>>>>> origin/main
   console.log('Profile user data:', user); // Debug log
 
   // Format date properly
@@ -24,6 +33,7 @@ const Profile = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navigation />
 
@@ -31,6 +41,15 @@ const Profile = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <h1 className="text-2xl font-bold text-gray-800 mb-6">My Profile</h1>
 
+=======
+    <div className="min-h-screen bg-gray-50 flex flex-col"> {/* Add flex-col */}
+      <Navigation />
+      
+      <div className="flex-1 max-w-4xl mx-auto py-8 px-4"> {/* Add flex-1 */}
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h1 className="text-2xl font-bold text-gray-800 mb-6">My Profile</h1>
+          
+>>>>>>> origin/main
           {/* Personal Information */}
           <div className="mb-8">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Personal Information</h2>
@@ -117,6 +136,7 @@ const Profile = () => {
           <div>
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Quick Actions</h2>
             <div className="flex flex-wrap gap-3">
+<<<<<<< HEAD
               <button 
                 onClick={() => navigate('/profile/orders')}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center space-x-2"
@@ -139,15 +159,33 @@ const Profile = () => {
               >
                 <span>🔒</span>
                 <span>Security Settings</span>
+=======
+              <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                View Order History
+              </button>
+              <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
+                Payment Methods
+              </button>
+              <button className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition">
+                Security Settings
+>>>>>>> origin/main
               </button>
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+      {/* Add Footer */}
+>>>>>>> origin/main
       <Footer />
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Profile;
+=======
+export default Profile;
+>>>>>>> origin/main

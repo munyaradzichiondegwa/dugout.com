@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom'; // Add this import
@@ -290,6 +291,12 @@ const VendorDashboardPage = () => {
       <Footer />
     </div>
   );
+=======
+import VendorDashboard from '../components/VendorDashboard';
+
+const VendorDashboardPage = () => {
+  return <VendorDashboard />;
+>>>>>>> origin/main
 };
 
 export default VendorDashboardPage;
